@@ -4,7 +4,6 @@ export default {};
 
 <template>
   <div class="card">
-    <div class="img">img</div>
     <h3>Title</h3>
     <span>Title</span>
   </div>
