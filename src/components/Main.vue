@@ -22,7 +22,10 @@ export default {
 
 <template>
   <main>
-    <div class="container">
+    <div
+      v-if="store.cards.data && store.cards.data.length !== undefined"
+      class="container"
+    >
       <section class="search">
         <select name="card-search" id="card-search">
           <option value="1">Alien</option>
@@ -31,6 +34,7 @@ export default {
 
       <MainCards />
     </div>
+    <div><h1>Loading...</h1></div>
   </main>
 </template>
 
