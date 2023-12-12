@@ -1,3 +1,4 @@
 @use "./partials/reset.scss";
 @use "./partials/common.scss";
-@use "./partials/mixin.scss";
+@use "./partials/mixin.scss" as *;
+@use "./partials/variables.scss" as *;
