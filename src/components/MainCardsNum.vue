@@ -1,10 +1,17 @@
 <script>
-export default {};
+import { store } from "../store";
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
 </script>
 
 <template>
   <div class="card-number">
-    <span>Found 39 cards</span>
+    <span>Found {{ store.cards.data.length }} cards</span>
   </div>
 </template>
 
