@@ -1,5 +1,10 @@
 <script>
-export default {};
+import MainCards from "./MainCards.vue";
+export default {
+  components: {
+    MainCards,
+  },
+};
 </script>
 
 <template>
@@ -10,7 +15,8 @@ export default {};
           <option value="1">Alien</option>
         </select>
       </section>
-      <section class="cards"></section>
+
+      <MainCards />
     </div>
   </main>
 </template>
