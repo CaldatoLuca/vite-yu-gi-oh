@@ -3,7 +3,7 @@ export default {};
 </script>
 
 <template>
-  <h1>Hello Template!</h1>
+  <main><h1>main</h1></main>
 </template>
 
 <style></style>
