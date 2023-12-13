@@ -25,7 +25,15 @@ export default {
   computed: {
     searchArchetype() {
       if (this.store.searchArchetype !== "") {
-        axios.get(this.store.SearchArchetypesApiUrl).then((apiData) => {
+        this.store.searchArchetypesApiUrl =
+          this.store.searchArchetypesApiUrl + this.store.searchArchetype;
+        axios.get(this.store.searchArchetypesApiUrl).then((apiData) => {
+          this.store.cards = apiData.data.data;
+        });
+        this.store.searchArchetypesApiUrl =
+          "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=";
+      } else {
+        axios.get(this.store.allApiUrl).then((apiData) => {
           this.store.cards = apiData.data.data;
         });
       }
