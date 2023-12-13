@@ -141,7 +141,7 @@ Nel caso specifico la funzione effettua diverse chiamate api a seconda del valor
 - api di ricerca per archetype a cui aggiungo alla fine il valore del v-model
 
 ```
-"https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=`v-mode`"
+"https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=`v-model`"
 ```
 
 NB
@@ -150,9 +150,9 @@ tutto cio dipende da come sono composte le api
 
 ## MainSearch
 
-In questo componente avviene la ricerca delle carte in base al loro archetipo, per farlo è stato necessario richiamare i dati con lo 'store' e emittare verso il main (al @change della select)
+In questo componente avviene la ricerca delle carte in base al loro archetipo, per farlo è stato necessario richiamare i dati con lo 'store' e emittare verso il main (al @change della select).
 
-Per utilizzare lo store è obbligatori importarlo:
+Per utilizzare lo store è obbligatorio importarlo:
 
 ```js
 <script>
@@ -167,7 +167,7 @@ export default {
 </script>
 ```
 
-Da qui si può utilizzare all' interno dell' html tutti i dati presenti nello store
+Da qui si può utilizzare all' interno dell' html tutti i dati presenti nello store.
 
 ```html
 <select
@@ -196,7 +196,7 @@ Questo componente funge da contenitore al numero delle carte e alla lista delle 
 
 ## MainCardsNum
 
-Questo componente lo store per poter stampare la lunghezza di cards, in questo modo si sa quante carte sono state trovate.
+Questo componente richiama lo store per poter stampare la lunghezza di cards, in questo modo si sa quante carte sono state trovate.
 
 ```js
 <script>
@@ -223,7 +223,7 @@ export default {
 
 In questo componente si va a popolare la lista col componente CommonCard.
 
-Richiamando i dati dallo store si possono passare le informazioni necessarie all' elemento CommonCard tramite 'props', in questo modo rendo indipendente CommonCard
+Richiamando i dati dallo store si possono passare le informazioni necessarie all' elemento CommonCard tramite 'props', in questo modo rendo indipendente CommonCard.
 
 ```html
 <template>
