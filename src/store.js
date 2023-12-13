@@ -12,6 +12,7 @@ export const store = reactive({
   //v-model per la search
   searchArchetype: "",
 
+  //v-model per la search
   searchArchetypesApiUrl:
     "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=",
 });
