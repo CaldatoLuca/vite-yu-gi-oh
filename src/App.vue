@@ -16,8 +16,4 @@ export default {
 
 <style scoped lang="scss">
 @use "./assets/scss/partials/mixin.scss" as *;
-
-.container {
-  @include container;
-}
 </style>
