@@ -24,13 +24,12 @@ export default {
   },
   computed: {
     searchArchetype() {
+      let apiArchetype = this.store.searchArchetypesApiUrl;
       if (this.store.searchArchetype !== "") {
-        this.store.searchArchetypesApiUrl += this.store.searchArchetype;
-        axios.get(this.store.searchArchetypesApiUrl).then((apiData) => {
+        apiArchetype += this.store.searchArchetype;
+        axios.get(apiArchetype).then((apiData) => {
           this.store.cards = apiData.data.data;
         });
-        this.store.searchArchetypesApiUrl =
-          "https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=";
       } else {
         axios.get(this.store.apiUrl).then((apiData) => {
           this.store.cards = apiData.data.data;
