@@ -1,5 +1,9 @@
 # Yu-Gi-Oh
 
+
+https://github.com/CaldatoLuca/vite-yu-gi-oh/assets/144032332/7975ac90-98db-4fca-a0fb-f05675d74609
+
+
 Creazione di una sito per la ricerca di carte di yu-gi-oh tramite una select.
 I dati forniti sono ottenuti tramite API.
 
