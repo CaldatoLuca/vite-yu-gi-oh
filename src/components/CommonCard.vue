@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="element" v-for="card in store.cards.data">
+  <div class="element" v-for="card in store.cards">
     <img :src="card.card_images[0].image_url" :alt="card.name" />
     <h3>{{ card.name }}</h3>
     <span> {{ card.archetype }}</span>

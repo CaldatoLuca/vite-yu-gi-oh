@@ -13,8 +13,8 @@ export default {
     };
   },
   created() {
-    axios.get(store.apiUrl).then((apiData) => {
-      store.cards = apiData.data;
+    axios.get(this.store.apiUrl).then((apiData) => {
+      this.store.cards = apiData.data.data;
     });
   },
 };
@@ -22,10 +22,7 @@ export default {
 
 <template>
   <main>
-    <div
-      v-if="store.cards.data && store.cards.data.length !== undefined"
-      class="container"
-    >
+    <div v-if="store.cards.length !== 0" class="container">
       <section class="search">
         <select name="card-search" id="card-search">
           <option value="1">Alien</option>
@@ -34,7 +31,7 @@ export default {
 
       <MainCards />
     </div>
-    <div><h1>Loading...</h1></div>
+    <div v-else><h1>Loading...</h1></div>
   </main>
 </template>
 

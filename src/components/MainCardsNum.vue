@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div class="card-number">
-    <span>Found {{ store.cards.data.length }} cards</span>
+    <span>Found {{ store.cards.length }} cards</span>
   </div>
 </template>
 
