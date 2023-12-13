@@ -11,7 +11,8 @@ export default {
 
 <template>
   <section class="search">
-    <select name="card-search">
+    <select v-model="store.searchArchetype" name="card-search">
+      <option value="">All</option>
       <option v-for="search in store.archetypes" :value="search.archetype_name">
         {{ search.archetype_name }}
       </option>
