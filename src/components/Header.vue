@@ -14,8 +14,5 @@ header {
   padding: 30px 0;
   display: flex;
   background-color: white;
-  .container {
-    @include container(960px);
-  }
 }
 </style>

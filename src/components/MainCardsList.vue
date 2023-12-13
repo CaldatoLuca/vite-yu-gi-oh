@@ -1,16 +1,26 @@
 <script>
 import CommonCard from "./CommonCard.vue";
-
+import { store } from "../store";
 export default {
   components: {
     CommonCard,
+  },
+  data() {
+    return {
+      store,
+    };
   },
 };
 </script>
 
 <template>
   <div class="cards-album">
-    <CommonCard />
+    <CommonCard
+      v-for="card in store.cards"
+      :src="card.card_images[0].image_url"
+      :name="card.name"
+      :archetype="card.archetype"
+    />
   </div>
 </template>
 

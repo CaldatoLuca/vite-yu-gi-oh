@@ -40,11 +40,9 @@ export default {
 @use "../assets/scss/partials/mixin" as *;
 main {
   background-color: $main;
-  .container {
-    @include container(960px);
-    .search {
-      padding: 20px;
-    }
+
+  .search {
+    padding: 20px;
   }
 }
 </style>

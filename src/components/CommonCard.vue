@@ -1,19 +1,14 @@
 <script>
-import { store } from "../store";
 export default {
-  data() {
-    return {
-      store,
-    };
-  },
+  props: ["src", "name", "archetype"],
 };
 </script>
 
 <template>
-  <div class="element" v-for="card in store.cards">
-    <img :src="card.card_images[0].image_url" :alt="card.name" />
-    <h3>{{ card.name }}</h3>
-    <span> {{ card.archetype }}</span>
+  <div class="element">
+    <img :src="src" :alt="name" />
+    <h3>{{ name }}</h3>
+    <span> {{ archetype }} </span>
   </div>
 </template>
 
