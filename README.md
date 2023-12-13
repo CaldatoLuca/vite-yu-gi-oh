@@ -1,7 +1,13 @@
-# Yu-Gi-Oh
+# Yu-Gi-Oh API
+
+
+https://github.com/CaldatoLuca/vite-yu-gi-oh/assets/144032332/7975ac90-98db-4fca-a0fb-f05675d74609
+
 
 Creazione di una sito per la ricerca di carte di yu-gi-oh tramite una select.
 I dati forniti sono ottenuti tramite API.
+
+Nel video, per motivi di performance, viene richiamata l' api con solo i primi 20 elementi (solo se la ricerca corrisponde a 'All')
 
 ## Focus principale esercizio
 
