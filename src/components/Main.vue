@@ -15,12 +15,21 @@ export default {
     };
   },
   created() {
-    axios.get(this.store.apiUrl).then((apiData) => {
+    axios.get(this.store.allApiUrl).then((apiData) => {
       this.store.cards = apiData.data.data;
     });
     axios.get(this.store.archetypesApiUrl).then((apiData) => {
       this.store.archetypes = apiData.data;
     });
+  },
+  computed: {
+    searchArchetype() {
+      if (this.store.searchArchetype !== "") {
+        axios.get(this.store.SearchArchetypesApiUrl).then((apiData) => {
+          this.store.cards = apiData.data.data;
+        });
+      }
+    },
   },
 };
 </script>
@@ -28,7 +37,7 @@ export default {
 <template>
   <main>
     <div v-if="store.cards.length !== 0" class="container">
-      <MainSearch />
+      <MainSearch @searchArchetype="searchArchetype" />
       <MainCards />
     </div>
     <div v-else><h1>Loading...</h1></div>
