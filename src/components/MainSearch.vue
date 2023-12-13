@@ -1,11 +1,20 @@
 <script>
-export default {};
+import { store } from "../store";
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
 </script>
 
 <template>
   <section class="search">
-    <select name="card-search" id="card-search">
-      <option value="1">Alien</option>
+    <select name="card-search">
+      <option v-for="search in store.archetypes" :value="search.archetype_name">
+        {{ search.archetype_name }}
+      </option>
     </select>
   </section>
 </template>

@@ -18,6 +18,9 @@ export default {
     axios.get(this.store.apiUrl).then((apiData) => {
       this.store.cards = apiData.data.data;
     });
+    axios.get(this.store.archetypesApiUrl).then((apiData) => {
+      this.store.archetypes = apiData.data;
+    });
   },
 };
 </script>
