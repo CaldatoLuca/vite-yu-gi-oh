@@ -1,11 +1,13 @@
 <script>
 import MainCards from "./MainCards.vue";
+import MainSearch from "./MainSearch.vue";
 import axios from "axios";
 import { store } from "../store";
 
 export default {
   components: {
     MainCards,
+    MainSearch,
   },
   data() {
     return {
@@ -23,12 +25,7 @@ export default {
 <template>
   <main>
     <div v-if="store.cards.length !== 0" class="container">
-      <section class="search">
-        <select name="card-search" id="card-search">
-          <option value="1">Alien</option>
-        </select>
-      </section>
-
+      <MainSearch />
       <MainCards />
     </div>
     <div v-else><h1>Loading...</h1></div>
@@ -40,9 +37,5 @@ export default {
 @use "../assets/scss/partials/mixin" as *;
 main {
   background-color: $main;
-
-  .search {
-    padding: 20px;
-  }
 }
 </style>
