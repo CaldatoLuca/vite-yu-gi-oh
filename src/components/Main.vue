@@ -14,14 +14,6 @@ export default {
       store,
     };
   },
-  created() {
-    axios.get(this.store.apiUrl).then((apiData) => {
-      this.store.cards = apiData.data.data;
-    });
-    axios.get(this.store.archetypesApiUrl).then((apiData) => {
-      this.store.archetypes = apiData.data;
-    });
-  },
   computed: {
     searchArchetype() {
       let apiArchetype = this.store.searchArchetypesApiUrl;
@@ -36,6 +28,12 @@ export default {
         });
       }
     },
+  },
+  created() {
+    this.searchArchetype;
+    axios.get(this.store.archetypesApiUrl).then((apiData) => {
+      this.store.archetypes = apiData.data;
+    });
   },
 };
 </script>
