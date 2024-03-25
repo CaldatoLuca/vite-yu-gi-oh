@@ -21,14 +21,13 @@ Per utilizzare Yu-Gi-Oh API, segui questi passaggi:
 
 1. Seleziona l'archetipo desiderato dalla barra di ricerca.
 2. Scorri tra le carte disponibili per quell'archetipo.
-3. Clicca su una carta per visualizzarne i dettagli.
-4. Esplora le varie funzionalità offerte dall'applicazione per soddisfare le tue esigenze.
+3. Visualizzare in alto il numero di risultati trovati
 
 ## Installazione
 
 Per installare Yu-Gi-Oh API in locale, segui questi passaggi:
 
-1. Clona il repository dal seguente link: [Yu-Gi-Oh API Repository](https://link-to-your-repository).
+1. Clona il repository.
 2. Accedi alla cartella del progetto tramite il terminale.
 3. Esegui il comando `npm install` per installare le dipendenze necessarie.
 4. Avvia l'applicazione locale con il comando `npm run dev`.
